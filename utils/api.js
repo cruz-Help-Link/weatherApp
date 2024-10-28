@@ -9,7 +9,8 @@ export default fetchWeather = async (location) => {
         return response.data;
 
     } catch(error) {
-        console.error(error);
+        console.error("Error fetching weather data:", error.response?.data || error.message);
+        // console.error("ERROR: "+ error);
         return null;
     }
 }
